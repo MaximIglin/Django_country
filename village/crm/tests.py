@@ -10,3 +10,6 @@ class CrmTestCases(TestCase):
     def setUp(self) -> None:
         self.user = User.objects.create(username = 'TestUser', password = 'password')
         return super().setUp()
+
+
+#git commit test
