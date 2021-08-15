@@ -1,0 +1,31 @@
+/*Styles for  authorisation.html and registration.html */
+
+/*Styles for forms of authorisation and registration*/
+.login_form
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  padding: auto;  
+}
+
+.form-control
+{
+  height: 65px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid rgb(209, 209, 238);
+  margin-top: 7px;
+  margin-bottom: 7px;
+  color: rgb(0, 255, 115);
+}
+
+label
+{
+  font-size: 1.2rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}

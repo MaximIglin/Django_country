@@ -1,0 +1,261 @@
+/*Styles for layout.html*/
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Styles for body*/
+body
+{
+display: flex;
+flex-direction: column;
+
+}
+
+/*Styles for header*/
+
+.header{
+    height: 90px;
+    width: 100%;  
+    background-color: rgba(0,0,0, 0.7);
+}
+.header_content{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    flex: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.header_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    flex: auto;
+    list-style: none;
+    margin: 0;
+    
+}
+
+/*Styles for buttons of menu*/
+.btn_all
+{
+    background-color: transparent;
+    border-radius: 0.1em;
+    display: flex;
+    align-self: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    flex-direction: row;
+    margin: 0px;
+    padding: 7px 5px;
+    text-decoration: none;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+ }
+
+
+  .btn_all:hover, .btn_all:focus 
+  {
+    color: #fff;
+  }
+
+  .btn3_all
+  {
+    border-color: snow;
+    color: #fff;
+    box-shadow: 0 0 5px 5px transparent, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;  
+  }
+
+  .btn3_all:hover 
+  {
+    box-shadow: 0 0 0px 0 snow, 0 0 5px 2px snow;
+  }
+
+/*Styles for authorisation block*/
+
+  .authorisation
+  {    
+      display:flex;
+      flex: content;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 9px;
+      
+  }
+  
+  .btn_authorisation
+  {
+      color: #fff;
+      background-color: transparent;
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0px;
+      padding: 5px 5px;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 1px;
+  }
+  
+  .btn_authorisation:hover, .btn:focus 
+    {
+      text-decoration: underline;
+      color: rgba(255, 201, 22, 0.8);
+      
+    }
+  
+  span{
+      color: white;
+      font-size: 1.4em;
+  }
+  
+  /*Styles for buttons of registration block*/
+  .btn_registration
+  {
+      font-size: 1.6rem;
+      height: 15px;
+      color: #fff;
+      background-color: transparent;
+      line-height: 1;
+      padding: 5px 5px;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      letter-spacing: 1px;
+  }
+  
+  .btn_registration:hover, .btn:focus 
+    {
+      text-decoration: underline;
+      color: rgba(255, 201, 22, 0.8);
+    }
+  
+/*Styles for main part*/
+.main
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Trebuchet MS';
+    
+}
+
+.main_title
+{
+  font-size: 3rem;
+}
+
+.main_text_paragraps
+{
+  font-size: 1.9rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.content_main
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+
+.main_text
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+/*Styles for images in main part*/
+
+.images
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 300px;
+    justify-content: space-between;
+    
+}
+img
+{
+    margin-top: 15px;
+    width: 30%;
+
+}
+
+/*Styles for adaptive*/
+
+@media screen and (max-width: 575px)
+{
+    body{
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width: 767px)
+{
+    body{
+    width: 540px;
+    }
+}
+
+@media screen and (max-width: 991px)
+{
+    body{
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    body{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+    }
+    .main_content{
+        width: 900px;
+    }
+    .footer{
+        width: 90%;
+    }
+    .video_media{
+        width: 100%;
+    }
+    .header{
+        width: 90%;
+    }
+    .header_menu{
+        display: none;
+    }
+}
+
+
+.row
+{
+  width: 100%;
+}
+

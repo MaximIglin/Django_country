@@ -1,0 +1,186 @@
+/*Styles for with_we.html*/
+
+
+/*Styles for first row of content */
+.row_with{
+    width: 80%;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/*Styles for buttons of content in first row*/
+a.button_app{
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    width: 30%;
+}
+a.button_app:hover{
+    color: white;
+    border-radius: 10px;
+    border:3px solid white;
+    
+}
+
+/*Styles for main content*/
+
+.main_content_with
+{
+    font-family: 'Trebuchet MS';
+}
+
+  .main_title_with
+  {
+      font-size: 3.9rem;
+      font-family:'Times New Roman', Times, serif;
+      color: rgba(0,0,0,0.7);
+  }
+
+/*Styles of village's information*/
+
+  .village
+  {
+      display: flex;
+      width: 80%;
+      height: 200px;
+      border-radius: 0.5em;
+      margin: auto;
+      margin-top: 30px;
+      overflow: hidden;
+      padding: 15px 15px 15px 15px;
+      background-color: rgb(225, 250, 221);
+      text-decoration: none;
+      color: rgb(80, 61, 61);
+      
+  }
+  .information{
+      width: 60%;
+  }
+
+ .village:hover{
+     color: coral;
+ }
+
+  .village_title
+  {
+   margin-left: 40px;   
+   font-size: 2.5rem;
+  }
+
+.village img
+{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+}
+
+.village_information
+{
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+
+.shot_information_title
+{
+    font-size: 1.5rem;
+}
+.short_information_text
+{
+    font-size: 1.1rem;
+}
+
+/*Styles of form*/
+
+.add_village_form{
+    display: flex;
+    flex-direction: column;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.5px;
+    font-size: 20px;  
+}
+
+.add_form_hover{
+    border-radius: 7px;
+    border: 2px solid rgb(172, 171, 171);
+    font-weight: normal;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.add_form_hover:hover{
+    border: 2px solid rgb(204, 219, 252);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(204, 219, 252);
+    display: block;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.add_form_hover:focus{
+    border: transparent;
+    border-radius: 5px;
+    display: block;
+    background-color: rgb(230, 236, 250);
+}
+
+.title_form{
+    width: 35%;
+    height: 50px;
+    font-size: 17px;
+}
+
+.region_form{
+    width: 35%;
+}
+
+.short_information_form{
+    width: 60%;
+    height: 150px;
+    font-size: 17px;
+}
+
+.village_avatar_link_form{
+    width: 35%;
+    font-size: 17px;
+}
+
+.all_information_form{
+    width: 65%;
+    height: 150px;
+    font-size: 17px;
+}
+
+.historical_informaion_form{
+    width: 65%;
+    height: 150px;
+    font-size: 17px;
+}
+
+.at_the_moment_form{
+    width: 65%;
+    height: 130px;
+    font-size: 17px;
+}
+
+.possibilities_form{
+    width: 65%;
+    height: 130px;
+    font-size: 17px;
+}
+
+
+/*Style of form for add photos of villages*/
+
+.add_photo_village{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn_chose_photo{
+    background-color: transparent;
+
+}

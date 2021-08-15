@@ -1,0 +1,69 @@
+{% load static %}
+
+<!--- Tempate, which view home-page of our project --->
+<!-- There, such us in all templates css and js filies are installed from dr. static and all paths are specified relative to this dr. -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название</title>
+    <link rel="stylesheet" href="{% static 'crm/css/styles.css' %}">
+</head>
+<body>
+  
+   <div class="intro">
+        <div class="video_fone">
+            <video class="video_media" src="{% static 'crm/video/fone9.mp4'%}" autoplay  muted loop></video> <!--Video-FONE -->
+        </div>
+
+        <div class="intro_content">
+            <!--Header-->
+            <div class="header">
+                <div class="header_content">
+                    <!--Main menu-->
+                    <ul class="header_menu">
+                        <!--All links related to urls names, which contain in crm/urls.py -->
+                        <li><a href="{% url 'home' %}" class="btn_all btn3_all">Главная</a></li>
+                        <li><a href="{% url 'about' %}" class="btn_all btn3_all">О проекте</a></li>
+                        <li><a href="{% url 'with_us' %}" class="btn_all btn3_all">С нами</a></li>
+                        <li><a href="{% url 'for_businessmen' %}" class="btn_all btn3_all">Предпринимателям</a></li>
+                    </ul>
+                    <!--Authorisation block-->
+                    <div class="authorisation">
+                        {% if not user.is_authenticated %}
+                        <a href="{% url 'authorisation' %}" class="btn_authorisation">ВОЙТИ</a>
+                        <span>|</span>
+                        <a href="{% url 'register' %}" class="btn_registration">РЕГИСТРАЦИЯ</a>
+                        {% else %}
+                        <a href="" class=" btn_authorisation">{{user.username}}</a>
+                        <span>|</span>
+                        <a href="{% url 'logout' %}" class=" btn_authorisation">ВЫЙТИ</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <!--Main-->
+            <div class="main">
+                <div class="main_content">
+                    <h1 style="color: rgb(192, 192, 93);">Малая Родина</h1>
+                    <h2>Данная площадка создана для тех, чьи корни лежат в местах, которые на данный момент стремительно вымирают!<br>Поможем селу вместе!</h2><br>
+                    <h3 style="color: rgb(192, 192, 93);">Россия начинается с деревни...</h3>
+                </div>
+            </div>
+            <!--Footer-->
+            <div class="footer">
+                <div class="footer_content">
+                  <a href="" class="btn_all btn3_all ">Почта</a>
+                  <a href="" class="btn_all btn3_all ">Социальные сети</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>

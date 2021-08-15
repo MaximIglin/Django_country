@@ -1,0 +1,233 @@
+/*Styles for villages.html*/
+
+
+/*Styles for main part*/
+.main_app{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.container_app{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/*Styles for content of village*/
+
+.row1_app{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 30px;
+    align-items: center;
+    background-color: rgb(225, 250, 221);
+    padding: 5px 5px 5px 5px;
+    border-radius: 7px;
+}
+
+.name_app{
+    font-size: 65px;  
+    font-weight: 700;      
+}
+
+.region_app{
+    color: rgb(100, 99, 99);
+}
+.text_app{
+    text-align: left;
+    width: 40%;
+    margin-right: 15px;
+}
+.avatar_app{
+    height: 99%;
+    width: 22%;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+/*Styles for button to add photo*/
+.button_app{
+    width: 20%;
+    height: 50px;
+    background-color: coral;
+    border-radius: 5px;
+    border: transparent;
+    color: white;
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.button_app:hover{
+    background-color: tomato;
+    border: 3px solid white;
+}
+
+.button_app:focus{
+    background-color: teal;
+}
+.row2_app{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Styles for sidebar*/
+
+.sidebar_app{
+    width: 25%;
+    height: 100%;
+}
+
+.sidebar_ul{
+    padding: 0;
+    list-style: none;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidebar_button
+{
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar_button:hover{
+    text-decoration: underline;
+    color: coral;
+    cursor: pointer;
+}
+
+.content_app{
+    width: 75%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Styles for content of photos*/
+#images_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.add_photos{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Styles for content of news*/
+.news_container{
+    display: flex;
+    width: 100%;
+    height: 170px;
+    border: 2px solid rgba(1, 1, 1, 0.1);
+    border-radius: 5px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#news_images{
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.news_container:hover{
+    cursor: pointer;
+    color: coral;
+}
+
+.news_image{
+    height: 98%;
+    width: 23%;
+    border-radius: 4px;
+    margin-top: 0;
+}
+
+.news_information{
+    width: 70%;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.title_and_date{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news_date{
+    color: gray;
+    font-size: 15px;
+}
+
+
+
+
+
+/*Styles for chart*/
+.chart_window{
+    width: 100%;
+}
+.every_comment{
+    border: 2px solid rgba(146, 190, 183, 0.5);
+    border-radius: 10px;
+    margin-bottom: 7px;
+    background-color: rgba(205, 249, 255, 0.3);
+    width:fit-content;
+    padding: 8px 8px 8px 8px;
+}
+.user_and_date{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#date{
+    color: gray;
+    font-size: small;
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+.comment_user_id{
+    font-size: 25px;
+}
+
+.comment_text{
+    font-size: 15px;
+    color: black;
+}
+
+.chart_form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items:flex-end;
+}
+
+.chart_input_form{
+    width: 650px;
+    height: 150px;
+    margin: 0;
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+
+
+

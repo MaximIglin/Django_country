@@ -1,0 +1,83 @@
+{% extends 'crm/layout.html' %}
+{% load crispy_forms_tags %}
+<!--This template is view for pages, which contain all information of villages -->
+
+{% block consistion %}
+<!--In this block the village, transferred to the context is displayed-->
+<div class="main_app">
+    <div class="container_app">
+        <!--Block, which contain avatar and short information of village-->
+        <div class="row1_app">
+            <img src="{{village.village_avatar_link}}" alt="" class="avatar_app">
+            <div class="text_app">
+                <h1 class="name_app" id="village_name">{{village.title}}</h1>
+                <h3 class="region_app">{{village.region}}</h3>
+            </div>
+
+            <a href="{% url 'add_photo' village.title %}" class="button_app" >Добавить фото</a>
+
+        </div>
+        <!--Block, which contain sidebar and content of sections-->
+        <div class="row2_app">
+            <!--Sidebar-->
+            <div class="sidebar_app">
+                <ul class="sidebar_ul">
+                    <li class="sidebar_button" id="btn1">О населенном пункте</li>
+                    <li class="sidebar_button" id="btn2">Историческая справка</li>
+                    <li class="sidebar_button" id="btn3">Ситуация на данный момент</li>
+                    <li class="sidebar_button" id="btn4">Фото</li>
+                    <li class="sidebar_button" id="btn5">Новости</li>
+                    <li class="sidebar_button" id="btn6">Возможности для предпринимателей</li>
+                    <li class="sidebar_button" id="btn7"><a href="{% url 'add_comment' village.title%}" class="sidebar_button">Обсуждения</a></li><!--endpoint interception name for "main_village/urls.py"-->
+                </ul>
+            </div>
+            <!--Content part-->
+            <div class="content_app" id="container">
+
+                {%if not add_photo_form%}
+                    {% if not chart_form %}
+                        <h2>О населённом пункте</h2>
+                        {{village.all_information}}
+                    {% endif %}
+                {%endif%}
+
+                <!--form to add photos-->
+                {% if add_photo_form %}
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <h3 class="text-center" style="margin-top: 30px; margin-right: 260px;">Добавить фото</h3>
+                        <form class ="add_photo_village" action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ add_photo_form|crispy }}
+                            <input type="submit" class="button_app btn_chose_photo" style="height: 50px; width: 300px; margin-top: 15px; font-size: 23px;" value="Добавить">
+                        </form>
+                    </div>
+                </div>
+                {% endif %}
+
+            <!--Chart-->    
+            {% if chart_form %}
+                <div class="chart_window">
+                    {% for comment in chart %}
+                        <div class="every_comment">
+                            <div class="user_and_date">
+                                <p class="comment_user_id" style="color:coral; font-size: 20px;">{{comment.user_id}}:</p><span id="date"> {{comment.date}}</span>
+                            </div>
+                            <p class="comment_text">{{comment.text_of_comment}}</p>
+                        </div>
+                    {%endfor%}
+                    <!--Chart form-->
+                    {% if user.is_authenticated %}
+                        <form class="chart_form" action="" method="POST">
+                            {% csrf_token %}
+                            {{ chart_form|crispy }}
+                            <input type="submit" class="button_app" style="height: 50px; width: 200px; margin-bottom: 7px;" value="Отправить">
+                        </form>
+                    {% endif %}
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

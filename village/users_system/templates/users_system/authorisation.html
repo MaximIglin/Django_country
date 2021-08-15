@@ -1,0 +1,16 @@
+{% extends 'crm/layout.html' %}
+{% load crispy_forms_tags %}
+<!--This template is view page of aythorisation -->
+<!--Styles for this block in: static/users_system/forms_styles.css-->
+{% block consistion %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3 class="text-center" style="margin-top: 30px;">Авторизация</h3>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" class="btn btn-primary" style="height: 60px; width: 300px; margin-top: 15px;" value="Войти">
+            </form>
+        </div>
+    </div>
+{% endblock %}

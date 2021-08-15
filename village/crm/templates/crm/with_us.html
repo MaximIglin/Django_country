@@ -1,0 +1,47 @@
+{% extends 'crm/layout.html' %}
+<!--This template is view for page "with us"-->
+<!--Styles for this template: "static/crm/css/styles_for_with.css" -->
+{% block consistion %}
+
+    <div class="main_with" style="margin-bottom: 30px;">
+        <div class="main_content_with">
+            <div class="row_with" >
+                <h1 class="main_title_with" style=" font-weight: bold;">С нами</h1>
+                <a href="{% url 'add_village' %}" class="button_app">Добавить населенный пункт</a>
+            </div>
+
+        <!--This block is work if context is contain addVillageForm -->    
+        {% if form %}
+            <form class="add_village_form" action="" method="POST" style=" width: 80%; margin: auto;">
+                {% csrf_token %}
+                {{form}}
+                <input class="button_app" type="submit" value="Добавить">
+            </form>
+        {% endif %}
+
+        <!--This block is work if context is not contain addVillageForm-->
+        {% if not form %}   
+            <!--Cycle, which view short information about all villages--> 
+            {% for village in villages %}    
+                <a href="{% url 'village' village.title %}" class="village"><!--endpoint interception name for "main_village/urls.py"-->
+                    <img src="{{ village.village_avatar_link }}" alt="" style="margin:0;">
+                    <div class="information">
+                        <h2 class="village_title" style="color: rgb(134, 59, 59);">{{village.title}}({{village.region}})</h2>
+                        <div class="village_information">
+                            <h3 class="shot_information_title">Краткая информация:</h3>
+                            <p class="short_information_text">{{ village.short_information }}</p>
+                        </div>
+                        <div class="subscribers">
+                            <h2></h2>
+                            <span></span>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %} 
+        {% endif %}   
+        </div>
+    </div>
+
+{% endblock %}
+
+       

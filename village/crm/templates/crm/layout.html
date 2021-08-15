@@ -1,0 +1,79 @@
+{% load static %}
+<!--Basic template, that the rest of the templates refer to-->
+<!--All css and js files for other templates, which extends this template are installed here-->
+<!--Context in this template is install by classes and functions in crm/views.py-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'crm/css/styles_layout.css' %}">
+    <link rel="stylesheet" href="{% static 'crm/css/styles_for_with.css' %}">
+    <link rel="stylesheet" href="{% static 'users_system/css/forms_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main_village/css/village_app_styles.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.01);">
+    <!--Header-->
+    <div class="header">
+        <div class="header_content">
+            <!--Main menu-->
+            <ul class="header_menu">
+                <li><a href="{% url 'home' %}" class="btn_all btn3_all">Главная</a></li>
+                <li><a href="{% url 'about' %}" class="btn_all btn3_all">О проекте</a></li>
+                <li><a href="{% url 'with_us' %}" class="btn_all btn3_all">С нами</a></li>
+                <li><a href="{% url 'for_businessmen' %}" class="btn_all btn3_all">Предпринимателям</a></li>
+            </ul>
+            <!--Authorisation block-->
+            <div class="authorisation">
+                {% if not user.is_authenticated %}
+                <a href="{% url 'authorisation' %}" class="btn_authorisation">ВОЙТИ</a>
+                <span>|</span>
+                <a href="{% url 'register' %}" class=" btn_registration">РЕГИСТРАЦИЯ</a>
+                {% else %}
+                        <a href="" class="btn_authorisation">{{user.username}}</a>
+                        <span>|</span>
+                        <a href="{% url 'logout' %}" class=" btn_authorisation">ВЫЙТИ</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!--Block, which contain html of subsidiary templates-->
+    {% block consistion %}
+    {% endblock %}
+    
+    {% if main_consistion %}
+    <!--The main block for pages "about" and "for bussinesmen"-->
+    <div class="main" style="margin-bottom: 30px;">        
+        <div class="content_main">
+            <div class="main_text">
+                <h1 class="main_title">{{ title }}</h1>
+                <p class="main_text_paragraps">{{ main_consistion }}</p><!--text before first image's block-->
+            </div>
+            <div class="images">
+                {% for link in list_of_links %}
+                <img src="{{link}}" alt="" class="main_images"><!--first image's block-->
+                {% endfor %}
+            </div>
+            {% if main_consistion_2%}
+            <div class="main_text">
+                <p class="main_text_paragraps">{{ main_consistion_2}}</p><!--text after first image's block-->
+            </div>
+            <div class="images">
+                {% for link in list_of_links_2 %}
+                <img src="{{link}}" alt="" class="main_images"><!--second image's block-->
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+    <script src="{% static 'main_village/js/main_village.js' %}"></script><!--script for "main_village/templates/main_village/villages.html"-->
+</body>
+</html>
