@@ -30,14 +30,14 @@ a.button_app:hover{
 
 .main_content_with
 {
-    font-family: 'Trebuchet MS';
+    font-family: "VTBGroupUI","Arial",sans-serif";
 }
 
   .main_title_with
   {
-      font-size: 3.9rem;
-      font-family:'Times New Roman', Times, serif;
+      font-size: 3rem;
       color: rgba(0,0,0,0.7);
+      font-family: "VTBGroupUI","Arial",sans-serif;
   }
 
 /*Styles of village's information*/

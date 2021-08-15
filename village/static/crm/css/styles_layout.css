@@ -52,7 +52,7 @@ flex-direction: column;
     border-radius: 0.1em;
     display: flex;
     align-self: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     flex-direction: row;
@@ -60,8 +60,8 @@ flex-direction: column;
     padding: 7px 5px;
     text-decoration: none;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 1px;
+    font-family: "VTBGroupUI","Arial",sans-serif;
  }
 
 
@@ -107,8 +107,8 @@ flex-direction: column;
       padding: 5px 5px;
       text-decoration: none;
       text-align: center;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       letter-spacing: 1px;
+      font-family: "VTBGroupUI","Arial",sans-serif";
   }
   
   .btn_authorisation:hover, .btn:focus 
@@ -134,8 +134,8 @@ flex-direction: column;
       padding: 5px 5px;
       text-decoration: none;
       text-align: center;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       letter-spacing: 1px;
+      font-family: "VTBGroupUI","Arial",sans-serif";
   }
   
   .btn_registration:hover, .btn:focus 
@@ -151,20 +151,20 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    font-family: 'Trebuchet MS';
-    
+    font-family: "VTBGroupUI","Arial",sans-serif";
 }
 
 .main_title
 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 .main_text_paragraps
 {
   font-size: 1.9rem;
   margin-top: 20px;
-  font-weight: bold;
+  font-weight: 380;
 }
 
 .content_main
