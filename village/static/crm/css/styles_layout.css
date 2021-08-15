@@ -19,7 +19,7 @@ flex-direction: column;
 .header{
     height: 90px;
     width: 100%;  
-    background-color: rgba(0,0,0, 0.71);
+    background-color: rgba(0,0,0, 0.7);
 }
 .header_content{
     display: flex;
